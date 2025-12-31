@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "tailwind",
     # CMC Apps
     "theme",  # app for Tailwind
+    "src.infrastructure",  # Capa de persistencia
 ]
 
 MIDDLEWARE = [
@@ -95,6 +96,8 @@ DATABASES = {
     }
 }
 
+# Modelo de usuario propio, no el por defecto de Django
+AUTH_USER_MODEL = "infrastructure.CustomUser"
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
